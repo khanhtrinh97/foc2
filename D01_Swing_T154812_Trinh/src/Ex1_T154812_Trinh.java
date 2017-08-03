@@ -10,6 +10,7 @@ import javax.swing.JCheckBox;
 import java.awt.Color;
 import javax.swing.JTextPane;
 import java.awt.Font;
+import java.awt.SystemColor;
 public class Ex1_T154812_Trinh extends JFrame{
 	JLabel lblUsername;
 	JTextField txtUserName;
@@ -17,7 +18,7 @@ public class Ex1_T154812_Trinh extends JFrame{
 	JTextPane txpane;
 	
 	public Ex1_T154812_Trinh(){
-		getContentPane().setBackground(Color.ORANGE);
+		getContentPane().setBackground(SystemColor.inactiveCaption);
 		getContentPane().setLayout(null);
 		lblUsername = new JLabel("Username:");
 		lblUsername.setLocation(30,50);
@@ -46,7 +47,7 @@ public class Ex1_T154812_Trinh extends JFrame{
 				char[] passArray =  txtpassword.getPassword();
 				String password = new String(passArray);
 				if(userName.equals("admin")&& password.equals("root")){
-					JOptionPane.showMessageDialog(Ex1_T154812_Trinh.this,"Hello"+userName);
+					JOptionPane.showMessageDialog(Ex1_T154812_Trinh.this,"Hello! "+userName);
 				}else{
 					JOptionPane.showMessageDialog(Ex1_T154812_Trinh.this,"Login Fail");
 					
@@ -54,19 +55,19 @@ public class Ex1_T154812_Trinh extends JFrame{
 				
 			}
 		});
-		btnNewButton.setBounds(136, 228, 89, 23);
+		btnNewButton.setBounds(58, 228, 89, 23);
 		getContentPane().add(btnNewButton);
 		
 		JCheckBox chckbxNewCheckBox = new JCheckBox("Remember me");
-		chckbxNewCheckBox.setBackground(Color.ORANGE);
-		chckbxNewCheckBox.setBounds(50, 185, 97, 23);
+		chckbxNewCheckBox.setBackground(SystemColor.inactiveCaption);
+		chckbxNewCheckBox.setBounds(40, 185, 97, 23);
 		getContentPane().add(chckbxNewCheckBox);
 		
 		txpane = new JTextPane();
 		txpane.setFont(new Font("Tahoma", Font.BOLD, 14));
-		txpane.setBackground(Color.ORANGE);
+		txpane.setBackground(SystemColor.inactiveCaption);
 		txpane.setText("LOGIN");
-		txpane.setBounds(120, 32, 56, 20);
+		txpane.setBounds(80, 11, 56, 20);
 		getContentPane().add(txpane);
 		setLocationRelativeTo(null);
 	}
@@ -74,6 +75,6 @@ public static void main(String [] args ){
 Ex1_T154812_Trinh frame = new Ex1_T154812_Trinh();
 frame.setVisible(true);
 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-frame.setSize(300,250);
+frame.setSize(250,300);
 }
 }
