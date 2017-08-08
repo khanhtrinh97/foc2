@@ -47,7 +47,9 @@ public class Ex1_T154812_Trinh extends JFrame{
 				char[] passArray =  txtpassword.getPassword();
 				String password = new String(passArray);
 				if(userName.equals("admin")&& password.equals("root")){
-					JOptionPane.showMessageDialog(Ex1_T154812_Trinh.this,"Hello! "+userName);
+					Main mainwindown = new Main();
+					mainwindown.setVisible(true);
+					Ex1_T154812_Trinh.this.setVisible(false);
 				}else{
 					JOptionPane.showMessageDialog(Ex1_T154812_Trinh.this,"Login Fail");
 					
